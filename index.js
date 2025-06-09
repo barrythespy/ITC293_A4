@@ -1,7 +1,5 @@
 // Only add the newsletter button if on the homepage
-const isHomePage =
-  window.location.pathname === "/" ||
-  window.location.pathname.endsWith("index.html");
+const isHomePage = window.location.pathname.includes("index") || window.location.pathname === "/";
 
 if (isHomePage) {
   //Putting a button that takes user to sign up form, placed after the header
