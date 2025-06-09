@@ -1,13 +1,19 @@
-//Putting a button that takes user to sign up form, placed after the header
-const header = document.querySelector("header");
-if (header) {
-  const signUpButton = document.createElement("button");
-  signUpButton.textContent = "Sign-up to our Newsletter Here";
-  signUpButton.onclick = () => {
-    window.open("form_index.html", "_blank");
-  };
-  signUpButton.className = "newsletter-button";
-  header.insertAdjacentElement("afterend", signUpButton);
+// Only add the newsletter button if on the homepage
+const isHomePage =
+  window.location.pathname === "/" ||
+  window.location.pathname.endsWith("index.html");
+
+if (isHomePage) {
+  //Putting a button that takes user to sign up form, placed after the header
+  const header = document.querySelector("header");
+  if (header) {
+    const signUpButton = document.createElement("button");
+    signUpButton.textContent = "Sign-up to our Newsletter Here";
+    signUpButton.onclick = () => {
+      window.open("form_index.html", "_blank");
+    };
+    signUpButton.className = "newsletter-button";
+    header.insertAdjacentElement("afterend", signUpButton);
 }
 //Creating a "hamburger" menu button for page links to hide in when screen/window size is smaller
 const hamburger = document.getElementById('hamburger');
