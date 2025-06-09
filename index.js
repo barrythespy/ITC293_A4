@@ -14,6 +14,7 @@ if (isHomePage) {
     };
     signUpButton.className = "newsletter-button";
     header.insertAdjacentElement("afterend", signUpButton);
+  }
 }
 //Creating a "hamburger" menu button for page links to hide in when screen/window size is smaller
 const hamburger = document.getElementById('hamburger');
@@ -76,7 +77,6 @@ function validateEmail(email) {
 
 //Sets toggle for radio buttons so user can unselect age range if they change their mind or misclick
 const ageRadios = document.querySelectorAll('input[type="radio"][name="age"]');
-
 ageRadios.forEach(radio => {
   radio.addEventListener("mousedown", function () {
     this.wasChecked = this.checked;
@@ -87,8 +87,4 @@ ageRadios.forEach(radio => {
       this.checked = false;
     }
   });
-  //Welcome message to show when sign in page is onload
-  window.onload = function() {
-  alert("Welcome to the XYZ Corporation/Ltd. - Newsletter Signup");
-};
 });
