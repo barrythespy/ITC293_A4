@@ -1,0 +1,85 @@
+<!--HTML file for newsletter sign up form. Dillon Jones June 2025-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign-Up Form</title>
+	<link rel="stylesheet" href="css/portfolio.css">
+	<!--Defer so JavaScript doesn't run until browser has fully loaded. Alternatively could place at the last line of body without defer as it will execute after HTML-->
+	<script defer src="index.js"></script>
+</head>
+<body class="form-page">
+	<div class="form-container form-centered">
+		<form id="form" action="">
+			<h1>Subscribe to HoverHealth<br>Newsletter</h1>
+			<div class="input-control">
+				<label for="email">Email</label>
+				<!--Max length 60 as per requirements-->
+				<input type="email" name="email" placeholder="(required field)" maxlength="60">
+			</div>
+			<div class="input-control">
+				<label for="firstName">First Name</label>
+				<!--Max length 60 as per requirements-->
+				<input id="firstName" type="text" name="firstName" placeholder="(required field)" maxlength="60">
+			</div>
+			<div class="input-control">
+				<label for="lastName">Last Name</label>
+				<!--Max length 60 as per requirements-->
+				<input id="lastName" type="text" name="lastName" placeholder="(required field)" maxlength="60">
+			</div>
+			<div class="input-control">
+				<label for="age">Age Range (optional)</label>
+				<div class="radio-group">
+					<label>
+						<input type="radio" name="age" value="15-25"> 15-25
+					</label>
+					<label>
+						<input type="radio" name="age" value="26-35"> 26-35
+					</label>
+					<label>
+						<input type="radio" name="age" value="36-45"> 36-45
+					</label>
+					<label>
+						<input type="radio" name="age" value="46-55"> 46-55
+					</label>
+					<label>
+						<input type="radio" name="age" value="55+"> 55+
+					</label>
+				</div>
+			</div>
+			<div class="input-control">
+				<label for="interests">Please select content areas below to tailor your newsletter content to your interests:</label>
+				<div class="checkbox-group">
+					<div class="checkbox-row">
+						<label>
+							<input type="checkbox" name="interests" value="News & Current Events"> News & Current Events
+						</label>
+						<label>
+							<input type="checkbox" name="interests" value="Careers"> Careers
+						</label>
+						<label>
+							<input type="checkbox" name="interests" value="Employee of the Month"> Employee of the Month
+						</label>
+					</div>
+					<div class="checkbox-row">				
+						<label>
+							<input type="checkbox" name="interests" value="Sustainability"> Sustainability
+						</label>
+						<label>
+							<input type="checkbox" name="interests" value="Data & Analytics"> Data & Analytics
+						</label>
+					</div>						
+				</div>
+			</div>	
+			<div class="input-control">
+				<label for="comments">Comments:</label>
+				<!--Text area minimum 60cols and 3 rows high as per requirements-->
+				<textarea id= "comments" name="comments" rows="3" cols="60"></textarea>
+			</div>
+			<button type="submit">Sign Up</button>
+			<button type="reset">Reset</button>
+		</form>
+	</div>	
+</body>
+</html>

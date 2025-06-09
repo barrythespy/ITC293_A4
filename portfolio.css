@@ -1,0 +1,596 @@
+/* External style sheet for web pages. Dillon Jones June 2025 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body base styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #400080;
+}
+
+/* Page-specific body background override */
+.other-background {
+    background-image: url("../images/resume-background.jpg");
+}
+
+.index-background {
+    background-image: none;
+    background-color: darkgray
+}
+
+/* Page-specific header background colors */
+.about-header header {
+    background-color: #EE5;
+}
+
+.resume-header header {
+    background-color: lightgoldenrodyellow;
+}
+
+.web-skills-header header {
+    background-color: palegreen;
+}
+
+.index-header header {
+    background-color: lightpink;
+}
+
+/* Block layout */
+.block-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.block {
+    text-align: left;
+    width: 30%;
+    height: 160px;
+    border: 1px solid darkgrey;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.resume-section-heading {
+    color: orangered;
+    font-weight: bold;
+}
+
+/* Main content styling */
+main {
+    padding: 0px;
+    width: 100%;
+}
+
+.resume-main {
+    float: left;
+    margin: 20px;
+    width: 50%;
+    border: 2px solid darkred;
+}
+
+/* Footer */
+footer {
+    background-color: royalblue;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+/* Image styling */
+img {
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.about-img img {
+    display: inline-block;
+    margin: 0 10px;
+    width: 30%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.resume-image {
+    margin-right: 30px;
+    float: right;
+    width: 40%;
+}
+
+/* Paragraph text decorations */
+.decorated {
+    text-decoration: underline;
+}
+
+.fancy-link {
+    font-style: italic;
+    font-size: 50px;
+}
+
+
+/* List styles */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ol {
+    list-style-type: upper-roman;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Alignments */
+.left-align {
+    text-align: left;
+    padding: 20px;
+}
+
+.center-align {
+    text-align: center;
+    list-style-position: inside;
+    font-family: 'Times New Roman';
+    padding: 15px 10px;
+}
+
+.web-center-align {
+    margin-left: 200px;
+    text-align: center;
+    width: 40%;
+    list-style-position: inside;
+    font-family: 'Arial';
+    padding: 15px 10px;
+}
+
+.right-align {
+    text-align: right;
+    padding-right: 100px;
+}
+
+/* Font styles */
+.highlight {
+    font-style: italic;
+    color: teal;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.bio {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: forestgreen;
+}
+
+.section-heading {
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Collab section */
+.collab {
+    margin-bottom: 100px;
+    margin-left: 200px;
+    float: left;
+}
+
+/* Skills text */
+.skills {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    color: purple;
+}
+
+.web-skill-list {
+    float: center;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Button Navigation Bar */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    background-color: royalblue;
+    flex-wrap: wrap; /* helps with small screens */
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+}
+
+.nav-button {
+    background-color: royalblue;
+    color: white;
+    border: 1px solid white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:not(:last-child) {
+    border-right: none;
+}
+
+.nav-button:hover {
+    background-color: #0d47a1;
+    transform: translateY(-2px); /* subtle lift effect */
+}
+
+
+/* Responsive nav */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .topnav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topnav li a {
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media print {
+  /* Hide nav buttons, background colours and images and increase text size */
+  .btn-group,
+  .nav-button,
+  button,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    background-image: none !important;
+    color: black !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 22pt;
+    margin-bottom: 10px;
+  }
+
+  main,
+  .bio,
+  .block-container,
+  .block {
+    width: 100% !important;
+    float: none !important;
+    clear: both;
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+  }
+
+  .block {
+    border: 1px solid #999;
+    padding: 10px;
+  }
+
+  .block h3 {
+    font-size: 16pt;
+  }
+
+  .block p,
+  .bio p {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  /* Make images stack nicely and not overflow */
+  .about-img {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .about-img img {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    float: none !important;
+    page-break-inside: avoid;
+  }
+
+  a::after {
+    content: none !important;
+  }
+}
+/*Below is formatting text columns and image columns in Communication, Problem Solving & Critical Thinking Skills page*/
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-column {
+    padding: 0px 30px;
+    width: 35%;
+}
+
+.image-column {
+    width: 40%;
+    text-align: center;
+}
+/*Max-width and height included to ensure images don't extend off screen*/
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(2.0);
+}
+/*To disable hover effect for images with no-hover class */
+.no-hover:hover {
+    transform: none !important;
+}
+
+.no-hover {
+    width: 100%;
+    border-radius: 8px;
+}
+.wrapper1 {
+    width: 100%;
+    margin-right: 200px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.half-size {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Styling for Newsletter Sign-Up Form*/
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 500px;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;    
+}
+/*Text format for Header1*/
+#form h1 {
+    color: black;
+    text-align: center;
+}
+
+#form button {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+/*Setup for input fields for user to write in*/
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+/*Displays options next to each other, spaced apart and aligned with text*/
+.radio-group label {
+    display: inline-block;
+    margin-right: 5em;
+    vertical-align: middle;
+}
+
+.checkbox-group label {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+/*Added to allow last two options to sit below to fit better*/
+.checkbox-row{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+/*Text area for names and email max sizes 60 as per requirements*/
+.input-control input[type="text"],
+.input-control input[type="email"] {
+    width: 60ch;
+    max-width: 60ch;
+}
+/*Text area minimum 60cols and 3 rows high as per requirements*/
+.input-control textarea {
+    width: 60ch;
+    resize: vertical;
+    min-height: calc(1.2em * 3);
+}
+/*This centers the form on the page*/
+.form-centered {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newsletter-button:hover {
+    background-color: darkblue;
+}
+
+/*Responsive rules for smaller screens/windows*/
+.navbar {
+    background-color: royalblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    height: 100%;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0 15px;    
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*.nav-links li:first-child {
+    border-left: none;
+}*/
+
+/*Styling for the hamburger menu*/
+.hamburger {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+/* Responsiveness styles so menu can be moved into Hamburger menu on smaller screen/windows*/
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: royalblue;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 15px 20px;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        border-top: 1px solid white;
+        background-color: royalblue;
+    }
+
+    .nav-links li a {
+        width: 100%;
+        height: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+

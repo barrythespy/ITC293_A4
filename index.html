@@ -1,0 +1,63 @@
+<!DOCTYPE html> <!--Main/Home page. Dillon Jones June 2025--> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="icon" href="./images/logo.png">
+    <!--Defer so JavaScript doesn't run until browser has fully loaded. Alternatively could place at the last line of body without defer as it will execute after HTML-->
+    <script defer src="index.js"></script>
+</head>
+
+<body class="index-header index-background">
+
+    <!-- Changed to nav and list instead of div and buttons for enhanced semantics-->
+    <nav class="navbar">
+        <!--"Hamburger" menu button, hidden in larger windows, helps keep window tidy in smaller windows-->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="djones_A4_resume.html">Resume</a></li>
+            <li><a href="djones_A4_web_skills.html">Web Skills</a></li>
+            <li><a href="djones_A4_communication_skills.html">Communication Skills</a></li>
+            <li><a href="djones_A4_problem_skills.html">Problem Solving Skills</a></li>
+            <li><a href="djones_A4_adaptability_skills.html">Adaptability Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header-->
+    <header>
+        <h1>HoverHealth<span id="trademark">&reg;</span></h1>        
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <div class="center-align">
+            <p class="fancy-link">Elevating your health and wellness every day, with care that truly hovers above the rest</p>
+        </div>
+
+        <p class="left-align">At HoverHealth, innovation is in our DNA. Our cutting-edge HoverHealth Drones are redefining the future of healthcare delivery, ensuring that life-saving services and resources reach everyone, everywhere.</p>
+        <p class="left-align">With precision, speed, and reliability at their core, our drones bridge the gap between accessibility and necessity, delivering vital medications, medical supplies, and urgent care technology to even the most remote locations. Designed with the highest standards of safety and sustainability, HoverHealth Drones are our commitment to a healthier, more connected world.</p>
+        <p class="left-align">Because at HoverHealth, we believe care should know no boundaries.</p>
+
+        <p>As featured in The Wall Street Journal, click 
+            <a href="https://www.wsj.com/health/healthcare/drones-healthcare-deliveries-drugs-tests-organs-20711c65" target="_blank">here</a> to find out what they had to say.
+        </p>
+
+        <p>Email us at: <a href="mailto:admin@hoverhealth.com">admin@hoverhealth.com</a></p>
+        <p>Call us: <a href="tel:0412345678">0412 345 678</a></p>
+        <!-- Added a print page button-->
+        <button onClick="window.print()">Print this page</button>
+
+        <img src="./images/drone.jpeg" alt="HoverHealth medical delivery drone in flight">
+    </main>
+    <!-- Included additional required notice-->
+    <footer>
+        <p>Dillon Jones</p>
+        <p>All information and content on this site are owned and permissioned by me and cannot be taken without my consent.</p>
+        <p>&copy; HoverHealth&reg; 2025.</p>
+    </footer>
+</body>
+</html>

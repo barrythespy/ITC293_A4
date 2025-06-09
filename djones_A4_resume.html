@@ -1,0 +1,90 @@
+<!DOCTYPE html> <!--Resume page. Dillon Jones June 2025--> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="icon" href="./images/logo.png">
+</head>
+<body class="resume-header other-background">
+
+    <!-- Changed to nav and list instead of div and buttons for enhanced semantics-->
+    <nav class="navbar">
+        <!--"Hamburger" menu button, hidden in larger windows, helps keep window tidy in smaller windows-->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="djones_A4_resume.html">Resume</a></li>
+            <li><a href="djones_A4_web_skills.html">Web Skills</a></li>
+            <li><a href="djones_A4_communication_skills.html">Communication Skills</a></li>
+            <li><a href="djones_A4_problem_skills.html">Problem Solving Skills</a></li>
+            <li><a href="djones_A4_adaptability_skills.html">Adaptability Skills</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>My Resume</h1>
+    </header>
+
+    <main class="resume-main">
+        <div>
+            <p><strong>Name: Dillon Jones</strong></p>
+            <p><strong>Phone:</strong> <a href="tel:0412345678">0412 345 678</a></p>
+            <p><strong>Email:</strong> <a href="mailto:admin@hoverhealth.com">admin@hoverhealth.com</a></p>
+        </div>
+
+        <h2 class="resume-section-heading">Work Experience</h2>
+        <ul>
+            <li>Senior Software Engineer, HoverHealth</li>
+            <li>Freelancer for small businesses</li>
+            <li>Software Developer at Bungie Inc</li>
+            <li>Worked on Visual FX with Universal Studios</li>
+            <li>Intern at Google HQ</li>
+        </ul>
+
+        <h2 class="resume-section-heading">Education</h2>
+        <ol>
+            <li>Bachelor of Education (TAS) Information Technology</li>
+            <li>Cisco CCNA</li>
+            <li>Google Cloud Professional Data Engineer</li>
+            <li>Ethical Hacker Certification</li>
+            <li>AWS Certified Solutions Architect</li>
+        </ol>
+        <!-- Added table as per requirements-->
+        <table>
+            <tr>
+                <th>Subjects</th>
+                <th>First Year</th>
+                <th>Second Year</th>
+            </tr>
+            <tr>
+                <td>Information Technology</td>
+                <td>ITC106, ITC211</td>
+                <td>ITC212, ITC114, ITC161</td>
+            </tr>
+            <tr>
+                <td>Teaching</td>
+                <td>EMT203, LIT101, EED422</td>
+                <td>EMT303, EMT445</td>
+            </tr>
+            <tr>
+                <td>Art/ Design</td>
+                <td>CCI102, DES113, GRP119</td>
+                <td>GRP225</td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td>IKC101</td>
+                <td> - </td>
+            </tr>
+        </table>
+        <button onClick="window.print()">Print this page</button>
+
+    </main>
+
+    <img src="./images/myphoto.png" alt="Professional Headshot" class="resume-image">
+
+    <footer>
+        <p>&copy; HoverHealth&reg; 2025.</p>
+    </footer>
+</body>
+</html>
