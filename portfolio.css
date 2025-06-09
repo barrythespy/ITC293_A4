@@ -14,7 +14,7 @@ body {
 
 /* Page-specific body background override */
 .other-background {
-    background-image: "resume-background.jpg"
+    background-image: url("resume-background.jpg");
 }
 
 .index-background {
